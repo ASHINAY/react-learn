@@ -1,28 +1,33 @@
 .root {
-  background-image: url("./assets/nature.jpg");
-  background-size: cover;
-  background: cover;
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row-reverse;
+  align-items: flex-end;
   color: white;
 }
-.button{
-  color:black;
-   height: 50px;
-  width: 180px;
-  border-radius: 15px;
-  border-color: red;
+
+.desktopView {
+  visibility: visible;
+  }
+
+.mobileView {
+  color: red;
+  visibility: hidden;
 }
-.button:hover{
-  background-color: red;
-  color: white;
-}
+
 @media (max-width: 480px) {
-  .root{
-    align-items: flex-start;
-    padding-top: 30px;
+  .root {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobileView {
+    visibility: visible;
+  }
+
+  .desktopView {
+    visibility: hidden;
   }
 }
